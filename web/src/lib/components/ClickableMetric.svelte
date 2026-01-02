@@ -5,12 +5,13 @@
 		metric: 'sunnyDays' | 'humidity' | 'temperature' | 'walkScore' | 'bikeScore' | 'costOfLiving' | 'safetyIndex' | 'kidFriendly' | 'evInfrastructure';
 		cityName: string;
 		country: string;
+		coordinates?: { lat: number; lng: number };
 		class?: string;
 	}
 
-	let { metric, cityName, country, class: className = '' }: Props = $props();
+	let { metric, cityName, country, coordinates, class: className = '' }: Props = $props();
 
-	let source = $derived(getMetricSource(metric, cityName, country));
+	let source = $derived(getMetricSource(metric, cityName, country, coordinates));
 </script>
 
 <a

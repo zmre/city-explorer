@@ -83,30 +83,45 @@ export function getClimateSourceUrl(cityName: string, country: string): string {
 
 /**
  * Generate source URL for Walk Score
+ * Format: https://www.walkscore.com/score/CityName-Country/lat=XX/lng=YY/
  */
-export function getWalkScoreUrl(cityName: string, country: string): string {
-	if (country === 'USA') {
-		// US cities use state abbreviations, but we'll link to the main search
-		return `${DATA_SOURCES.walkScore.baseUrl}/score/${cityName.toLowerCase().replace(/\s+/g, '-')}`;
+export function getWalkScoreUrl(
+	cityName: string,
+	country: string,
+	coordinates?: { lat: number; lng: number }
+): string {
+	const citySlug = cityName.replace(/\s+/g, '-');
+	const countrySlug = country.replace(/\s+/g, '-');
+
+	// Build the location part of the URL
+	let locationPart = `${citySlug}-${countrySlug}`;
+
+	// Add coordinates for precise location matching
+	if (coordinates) {
+		return `${DATA_SOURCES.walkScore.baseUrl}/score/${locationPart}/lat=${coordinates.lat}/lng=${coordinates.lng}/`;
 	}
-	// International cities
-	return `${DATA_SOURCES.walkScore.baseUrl}/score/${cityName.toLowerCase().replace(/\s+/g, '-')}`;
+
+	return `${DATA_SOURCES.walkScore.baseUrl}/score/${locationPart}/`;
 }
 
 /**
  * Generate source URL for cost of living data
+ * Format: https://www.numbeo.com/cost-of-living/in/City-Country
  */
 export function getCostOfLivingUrl(cityName: string, country: string): string {
-	const citySlug = cityName.replace(/\s+/g, '+');
-	return `${DATA_SOURCES.numbeo.baseUrl}/cost-of-living/in/${citySlug}`;
+	const citySlug = cityName.replace(/\s+/g, '-');
+	const countrySlug = country.replace(/\s+/g, '-');
+	return `${DATA_SOURCES.numbeo.baseUrl}/cost-of-living/in/${citySlug}-${countrySlug}`;
 }
 
 /**
  * Generate source URL for safety/crime data
+ * Format: https://www.numbeo.com/crime/in/City-Country
  */
 export function getSafetyUrl(cityName: string, country: string): string {
-	const citySlug = cityName.replace(/\s+/g, '+');
-	return `${DATA_SOURCES.safetyCrime.baseUrl}/in/${citySlug}`;
+	const citySlug = cityName.replace(/\s+/g, '-');
+	const countrySlug = country.replace(/\s+/g, '-');
+	return `${DATA_SOURCES.safetyCrime.baseUrl}/in/${citySlug}-${countrySlug}`;
 }
 
 /**
@@ -115,7 +130,8 @@ export function getSafetyUrl(cityName: string, country: string): string {
 export function getMetricSource(
 	metric: 'sunnyDays' | 'humidity' | 'temperature' | 'walkScore' | 'bikeScore' | 'costOfLiving' | 'safetyIndex' | 'kidFriendly' | 'evInfrastructure',
 	cityName: string,
-	country: string
+	country: string,
+	coordinates?: { lat: number; lng: number }
 ): { name: string; url: string; description: string } {
 	switch (metric) {
 		case 'sunnyDays':
@@ -130,7 +146,7 @@ export function getMetricSource(
 		case 'bikeScore':
 			return {
 				name: DATA_SOURCES.walkScore.name,
-				url: getWalkScoreUrl(cityName, country),
+				url: getWalkScoreUrl(cityName, country, coordinates),
 				description: DATA_SOURCES.walkScore.description
 			};
 		case 'costOfLiving':

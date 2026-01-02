@@ -9,7 +9,7 @@
 		initialZoom?: number;
 	}
 
-	let { city, initialZoom = 2 }: Props = $props();
+	let { city, initialZoom = 0.1 }: Props = $props();
 
 	let container: HTMLDivElement;
 	let width = $state(400);

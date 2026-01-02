@@ -24,6 +24,27 @@
 	// Boulder baseline for comparison
 	let boulder = $derived(citiesStore.allCities.find((c) => c.slug === 'boulder-co'));
 
+	// Calculate category rankings
+	let categoryRanks = $derived.by(() => {
+		if (!city) return null;
+		const cities = citiesStore.allCities;
+		const total = cities.length;
+
+		const getRank = (score: number, getter: (c: typeof city) => number) => {
+			return cities.filter((c) => getter(c) > score).length + 1;
+		};
+
+		return {
+			climate: getRank(city.scores.climate, (c) => c.scores.climate),
+			geography: getRank(city.scores.geography, (c) => c.scores.geography),
+			accessibility: getRank(city.scores.accessibility, (c) => c.scores.accessibility),
+			cost: getRank(city.scores.cost, (c) => c.scores.cost),
+			family: getRank(city.scores.family, (c) => c.scores.family),
+			sustainability: getRank(city.scores.sustainability, (c) => c.scores.sustainability),
+			total
+		};
+	});
+
 	function goToCity(citySlug: string) {
 		goto(`/city/${citySlug}`);
 	}
@@ -73,26 +94,32 @@
 			<div class="stat bg-base-200 rounded-lg">
 				<div class="stat-title">Climate</div>
 				<div class="stat-value text-xl">{city.scores.climate.toFixed(0)}</div>
+				{#if categoryRanks}<div class="stat-desc">#{categoryRanks.climate} of {categoryRanks.total}</div>{/if}
 			</div>
 			<div class="stat bg-base-200 rounded-lg">
 				<div class="stat-title">Geography</div>
 				<div class="stat-value text-xl">{city.scores.geography.toFixed(0)}</div>
+				{#if categoryRanks}<div class="stat-desc">#{categoryRanks.geography} of {categoryRanks.total}</div>{/if}
 			</div>
 			<div class="stat bg-base-200 rounded-lg">
 				<div class="stat-title">Accessibility</div>
 				<div class="stat-value text-xl">{city.scores.accessibility.toFixed(0)}</div>
+				{#if categoryRanks}<div class="stat-desc">#{categoryRanks.accessibility} of {categoryRanks.total}</div>{/if}
 			</div>
 			<div class="stat bg-base-200 rounded-lg">
 				<div class="stat-title">Cost</div>
 				<div class="stat-value text-xl">{city.scores.cost.toFixed(0)}</div>
+				{#if categoryRanks}<div class="stat-desc">#{categoryRanks.cost} of {categoryRanks.total}</div>{/if}
 			</div>
 			<div class="stat bg-base-200 rounded-lg">
 				<div class="stat-title">Family</div>
 				<div class="stat-value text-xl">{city.scores.family.toFixed(0)}</div>
+				{#if categoryRanks}<div class="stat-desc">#{categoryRanks.family} of {categoryRanks.total}</div>{/if}
 			</div>
 			<div class="stat bg-base-200 rounded-lg">
 				<div class="stat-title">Sustainability</div>
 				<div class="stat-value text-xl">{city.scores.sustainability.toFixed(0)}</div>
+				{#if categoryRanks}<div class="stat-desc">#{categoryRanks.sustainability} of {categoryRanks.total}</div>{/if}
 			</div>
 		</div>
 
@@ -104,28 +131,28 @@
 				<div class="bg-base-200 rounded-lg p-4">
 					<h2 class="text-xl font-bold mb-4">Climate</h2>
 					<div class="grid grid-cols-2 gap-4">
-						<ClickableMetric metric="sunnyDays" cityName={city.name} country={city.country}>
+						<ClickableMetric metric="sunnyDays" cityName={city.name} country={city.country} coordinates={city.coordinates}>
 							<div>
 								<div class="text-sm opacity-70">Sunny Days</div>
 								<div class="text-2xl font-bold">{city.climate.sunnyDays}</div>
 								<div class="text-xs opacity-50">days per year</div>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="humidity" cityName={city.name} country={city.country}>
+						<ClickableMetric metric="humidity" cityName={city.name} country={city.country} coordinates={city.coordinates}>
 							<div>
 								<div class="text-sm opacity-70">Humidity</div>
 								<div class="text-2xl font-bold">{city.climate.humidity}%</div>
 								<div class="text-xs opacity-50">average</div>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="temperature" cityName={city.name} country={city.country}>
+						<ClickableMetric metric="temperature" cityName={city.name} country={city.country} coordinates={city.coordinates}>
 							<div>
 								<div class="text-sm opacity-70">Summer High</div>
 								<div class="text-2xl font-bold">{Math.round(city.climate.summerHigh * 9/5 + 32)}°F</div>
 								<div class="text-xs opacity-50">{city.climate.summerHigh}°C</div>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="temperature" cityName={city.name} country={city.country}>
+						<ClickableMetric metric="temperature" cityName={city.name} country={city.country} coordinates={city.coordinates}>
 							<div>
 								<div class="text-sm opacity-70">Winter Low</div>
 								<div class="text-2xl font-bold">{Math.round(city.climate.winterLow * 9/5 + 32)}°F</div>
@@ -138,7 +165,7 @@
 				<!-- Geography -->
 				<div class="bg-base-200 rounded-lg p-4">
 					<h2 class="text-xl font-bold mb-4">Location</h2>
-					<CityLocationMap {city} initialZoom={1} />
+					<CityLocationMap {city} />
 					<div class="flex gap-4 mt-4">
 						<div class="flex items-center gap-2">
 							{#if city.geography.nearMountains}
@@ -161,35 +188,35 @@
 				<div class="bg-base-200 rounded-lg p-4">
 					<h2 class="text-xl font-bold mb-4">Livability</h2>
 					<div class="space-y-3">
-						<ClickableMetric metric="walkScore" cityName={city.name} country={city.country} class="flex justify-between items-center w-full">
+						<ClickableMetric metric="walkScore" cityName={city.name} country={city.country} coordinates={city.coordinates} class="flex justify-between items-center w-full">
 							<span>Walk Score</span>
 							<div class="flex items-center gap-2">
 								<progress class="progress progress-primary w-24" value={city.livability.walkScore} max="100"></progress>
 								<span class="font-mono w-8">{city.livability.walkScore}</span>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="bikeScore" cityName={city.name} country={city.country} class="flex justify-between items-center w-full">
+						<ClickableMetric metric="bikeScore" cityName={city.name} country={city.country} coordinates={city.coordinates} class="flex justify-between items-center w-full">
 							<span>Bike Score</span>
 							<div class="flex items-center gap-2">
 								<progress class="progress progress-primary w-24" value={city.livability.bikeScore} max="100"></progress>
 								<span class="font-mono w-8">{city.livability.bikeScore}</span>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="safetyIndex" cityName={city.name} country={city.country} class="flex justify-between items-center w-full">
+						<ClickableMetric metric="safetyIndex" cityName={city.name} country={city.country} coordinates={city.coordinates} class="flex justify-between items-center w-full">
 							<span>Safety Index</span>
 							<div class="flex items-center gap-2">
 								<progress class="progress progress-primary w-24" value={city.livability.safetyIndex} max="100"></progress>
 								<span class="font-mono w-8">{city.livability.safetyIndex}</span>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="kidFriendly" cityName={city.name} country={city.country} class="flex justify-between items-center w-full">
+						<ClickableMetric metric="kidFriendly" cityName={city.name} country={city.country} coordinates={city.coordinates} class="flex justify-between items-center w-full">
 							<span>Kid Friendly</span>
 							<div class="flex items-center gap-2">
 								<progress class="progress progress-primary w-24" value={city.livability.kidFriendly} max="100"></progress>
 								<span class="font-mono w-8">{city.livability.kidFriendly}</span>
 							</div>
 						</ClickableMetric>
-						<ClickableMetric metric="evInfrastructure" cityName={city.name} country={city.country} class="flex justify-between items-center w-full">
+						<ClickableMetric metric="evInfrastructure" cityName={city.name} country={city.country} coordinates={city.coordinates} class="flex justify-between items-center w-full">
 							<span>EV Infrastructure</span>
 							<div class="flex items-center gap-2">
 								<progress class="progress progress-primary w-24" value={city.livability.evInfrastructure} max="100"></progress>
@@ -197,7 +224,7 @@
 							</div>
 						</ClickableMetric>
 						<div class="divider my-2"></div>
-						<ClickableMetric metric="costOfLiving" cityName={city.name} country={city.country} class="flex justify-between items-center w-full">
+						<ClickableMetric metric="costOfLiving" cityName={city.name} country={city.country} coordinates={city.coordinates} class="flex justify-between items-center w-full">
 							<span>Cost of Living Index</span>
 							<span class="font-mono font-bold">{city.livability.costOfLiving}</span>
 						</ClickableMetric>
