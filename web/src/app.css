@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+/* DaisyUI dark theme customization */
+@theme {
+	/* Chart colors for D3 visualizations */
+	--color-chart-1: oklch(0.7 0.15 200);
+	--color-chart-2: oklch(0.7 0.15 150);
+	--color-chart-3: oklch(0.7 0.15 100);
+	--color-chart-4: oklch(0.7 0.15 50);
+	--color-chart-5: oklch(0.7 0.15 300);
+	--color-chart-6: oklch(0.7 0.15 250);
+
+	/* Region colors for map/scatter */
+	--color-region-north-america: oklch(0.7 0.15 220);
+	--color-region-europe: oklch(0.7 0.15 150);
+	--color-region-oceania: oklch(0.7 0.15 50);
+	--color-region-south-america: oklch(0.7 0.15 100);
+}
+
+/* Base styles */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-base-100 text-base-content min-h-screen;
+}
+
+/* D3 chart styling */
+.chart-container {
+	@apply w-full h-full;
+}
+
+.chart-tooltip {
+	@apply absolute z-50 px-3 py-2 text-sm rounded-lg shadow-lg;
+	@apply bg-base-200 text-base-content border border-base-300;
+	pointer-events: none;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-base-200;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-base-300 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-neutral;
+}

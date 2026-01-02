@@ -1,0 +1,2046 @@
+{
+  "generated": "2026-01-01T23:37:02.022Z",
+  "count": 51,
+  "cities": [
+    {
+      "slug": "valencia",
+      "name": "Valencia",
+      "country": "Spain",
+      "region": "Europe",
+      "population": 791413,
+      "coordinates": {
+        "lat": 39.47,
+        "lng": -0.377
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 67,
+        "summerHigh": 30,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 75,
+        "bikeScore": 70,
+        "costOfLiving": 46.5,
+        "safetyIndex": 72,
+        "kidFriendly": 78,
+        "evInfrastructure": 65,
+        "airportDistance": 15
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 12.5,
+        "cost": 15,
+        "family": 11.3,
+        "sustainability": 10.1,
+        "total": 82.9
+      },
+      "rank": 1
+    },
+    {
+      "slug": "alicante",
+      "name": "Alicante",
+      "country": "Spain",
+      "region": "Europe",
+      "population": 337482,
+      "coordinates": {
+        "lat": 38.346,
+        "lng": -0.49
+      },
+      "climate": {
+        "sunnyDays": 320,
+        "humidity": 63,
+        "summerHigh": 31,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 68,
+        "bikeScore": 60,
+        "costOfLiving": 45,
+        "safetyIndex": 68,
+        "kidFriendly": 74,
+        "evInfrastructure": 55,
+        "airportDistance": 15
+      },
+      "scores": {
+        "climate": 26,
+        "geography": 10,
+        "accessibility": 11.8,
+        "cost": 15,
+        "family": 10.7,
+        "sustainability": 8.6,
+        "total": 82.1
+      },
+      "rank": 2
+    },
+    {
+      "slug": "malaga",
+      "name": "Malaga",
+      "country": "Spain",
+      "region": "Europe",
+      "population": 578460,
+      "coordinates": {
+        "lat": 36.721,
+        "lng": -4.421
+      },
+      "climate": {
+        "sunnyDays": 320,
+        "humidity": 65,
+        "summerHigh": 31,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 72,
+        "bikeScore": 65,
+        "costOfLiving": 48,
+        "safetyIndex": 70,
+        "kidFriendly": 76,
+        "evInfrastructure": 60,
+        "airportDistance": 10
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 12.2,
+        "cost": 15,
+        "family": 11,
+        "sustainability": 9.4,
+        "total": 81.5
+      },
+      "rank": 3
+    },
+    {
+      "slug": "montpellier",
+      "name": "Montpellier",
+      "country": "France",
+      "region": "Europe",
+      "population": 285121,
+      "coordinates": {
+        "lat": 43.611,
+        "lng": 3.877
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 65,
+        "summerHigh": 30,
+        "winterLow": 3
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 68,
+        "bikeScore": 70,
+        "costOfLiving": 65,
+        "safetyIndex": 70,
+        "kidFriendly": 80,
+        "evInfrastructure": 68,
+        "airportDistance": 12
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 11.8,
+        "cost": 12,
+        "family": 11.3,
+        "sustainability": 10.4,
+        "total": 79.4
+      },
+      "rank": 4
+    },
+    {
+      "slug": "faro",
+      "name": "Faro",
+      "country": "Portugal",
+      "region": "Europe",
+      "population": 118000,
+      "coordinates": {
+        "lat": 37.019,
+        "lng": -7.935
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 71,
+        "summerHigh": 29,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 62,
+        "bikeScore": 55,
+        "costOfLiving": 42,
+        "safetyIndex": 72,
+        "kidFriendly": 76,
+        "evInfrastructure": 45,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 11.2,
+        "cost": 15,
+        "family": 11.1,
+        "sustainability": 7.5,
+        "total": 78.8
+      },
+      "rank": 5
+    },
+    {
+      "slug": "heraklion",
+      "name": "Heraklion",
+      "country": "Greece",
+      "region": "Europe",
+      "population": 173993,
+      "coordinates": {
+        "lat": 35.339,
+        "lng": 25.133
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 66,
+        "summerHigh": 30,
+        "winterLow": 9
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 68,
+        "bikeScore": 48,
+        "costOfLiving": 48,
+        "safetyIndex": 70,
+        "kidFriendly": 74,
+        "evInfrastructure": 42,
+        "airportDistance": 5
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 11.8,
+        "cost": 15,
+        "family": 10.8,
+        "sustainability": 6.8,
+        "total": 78.4
+      },
+      "rank": 6
+    },
+    {
+      "slug": "nice",
+      "name": "Nice",
+      "country": "France",
+      "region": "Europe",
+      "population": 340017,
+      "coordinates": {
+        "lat": 43.71,
+        "lng": 7.262
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 68,
+        "summerHigh": 28,
+        "winterLow": 5
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 70,
+        "bikeScore": 72,
+        "costOfLiving": 85,
+        "safetyIndex": 72,
+        "kidFriendly": 82,
+        "evInfrastructure": 70,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 12,
+        "cost": 9,
+        "family": 11.5,
+        "sustainability": 10.6,
+        "total": 77.2
+      },
+      "rank": 7
+    },
+    {
+      "slug": "thessaloniki",
+      "name": "Thessaloniki",
+      "country": "Greece",
+      "region": "Europe",
+      "population": 325182,
+      "coordinates": {
+        "lat": 40.64,
+        "lng": 22.944
+      },
+      "climate": {
+        "sunnyDays": 265,
+        "humidity": 66,
+        "summerHigh": 32,
+        "winterLow": 2
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 65,
+        "bikeScore": 52,
+        "costOfLiving": 46,
+        "safetyIndex": 68,
+        "kidFriendly": 72,
+        "evInfrastructure": 48,
+        "airportDistance": 18
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 10,
+        "accessibility": 11.5,
+        "cost": 15,
+        "family": 10.5,
+        "sustainability": 7.5,
+        "total": 76.5
+      },
+      "rank": 8
+    },
+    {
+      "slug": "hobart",
+      "name": "Hobart",
+      "country": "Australia",
+      "region": "Oceania",
+      "population": 240000,
+      "coordinates": {
+        "lat": -42.883,
+        "lng": 147.331
+      },
+      "climate": {
+        "sunnyDays": 200,
+        "humidity": 65,
+        "summerHigh": 22,
+        "winterLow": 5
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 72,
+        "bikeScore": 68,
+        "costOfLiving": 62.8,
+        "safetyIndex": 79.2,
+        "kidFriendly": 88,
+        "evInfrastructure": 58,
+        "airportDistance": 18
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 12.2,
+        "cost": 12,
+        "family": 12.5,
+        "sustainability": 9.5,
+        "total": 76.2
+      },
+      "rank": 9
+    },
+    {
+      "slug": "split",
+      "name": "Split",
+      "country": "Croatia",
+      "region": "Europe",
+      "population": 178192,
+      "coordinates": {
+        "lat": 43.508,
+        "lng": 16.44
+      },
+      "climate": {
+        "sunnyDays": 275,
+        "humidity": 64,
+        "summerHigh": 31,
+        "winterLow": 5
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 72,
+        "bikeScore": 58,
+        "costOfLiving": 52,
+        "safetyIndex": 75,
+        "kidFriendly": 78,
+        "evInfrastructure": 52,
+        "airportDistance": 25
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 10.2,
+        "cost": 12,
+        "family": 11.5,
+        "sustainability": 8.3,
+        "total": 75.9
+      },
+      "rank": 10
+    },
+    {
+      "slug": "porto",
+      "name": "Porto",
+      "country": "Portugal",
+      "region": "Europe",
+      "population": 231962,
+      "coordinates": {
+        "lat": 41.158,
+        "lng": -8.629
+      },
+      "climate": {
+        "sunnyDays": 222,
+        "humidity": 75,
+        "summerHigh": 26,
+        "winterLow": 5
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 70,
+        "bikeScore": 65,
+        "costOfLiving": 44.8,
+        "safetyIndex": 74,
+        "kidFriendly": 80,
+        "evInfrastructure": 58,
+        "airportDistance": 18
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 10,
+        "accessibility": 12,
+        "cost": 15,
+        "family": 11.6,
+        "sustainability": 9.2,
+        "total": 75.8
+      },
+      "rank": 11
+    },
+    {
+      "slug": "la-serena",
+      "name": "La Serena",
+      "country": "Chile",
+      "region": "South America",
+      "population": 220000,
+      "coordinates": {
+        "lat": -29.903,
+        "lng": -71.252
+      },
+      "climate": {
+        "sunnyDays": 280,
+        "humidity": 68,
+        "summerHigh": 24,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 60,
+        "bikeScore": 48,
+        "costOfLiving": 45,
+        "safetyIndex": 70,
+        "kidFriendly": 74,
+        "evInfrastructure": 35,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 10,
+        "accessibility": 11,
+        "cost": 15,
+        "family": 10.8,
+        "sustainability": 6.2,
+        "total": 75
+      },
+      "rank": 12
+    },
+    {
+      "slug": "cagliari",
+      "name": "Cagliari",
+      "country": "Italy",
+      "region": "Europe",
+      "population": 154460,
+      "coordinates": {
+        "lat": 39.224,
+        "lng": 9.122
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 69,
+        "summerHigh": 31,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 60,
+        "bikeScore": 52,
+        "costOfLiving": 52,
+        "safetyIndex": 68,
+        "kidFriendly": 70,
+        "evInfrastructure": 48,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 11,
+        "cost": 12,
+        "family": 10.4,
+        "sustainability": 7.5,
+        "total": 74.9
+      },
+      "rank": 13
+    },
+    {
+      "slug": "graz",
+      "name": "Graz",
+      "country": "Austria",
+      "region": "Europe",
+      "population": 291000,
+      "coordinates": {
+        "lat": 47.07,
+        "lng": 15.439
+      },
+      "climate": {
+        "sunnyDays": 205,
+        "humidity": 65,
+        "summerHigh": 26,
+        "winterLow": 0
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 84,
+        "bikeScore": 90,
+        "costOfLiving": 59.8,
+        "safetyIndex": 81.4,
+        "kidFriendly": 95,
+        "evInfrastructure": 85,
+        "airportDistance": 12
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 3,
+        "accessibility": 13.4,
+        "cost": 12,
+        "family": 13.2,
+        "sustainability": 13.1,
+        "total": 74.8
+      },
+      "rank": 14
+    },
+    {
+      "slug": "wellington",
+      "name": "Wellington",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "population": 430000,
+      "coordinates": {
+        "lat": -41.287,
+        "lng": 174.776
+      },
+      "climate": {
+        "sunnyDays": 185,
+        "humidity": 73,
+        "summerHigh": 21,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 75,
+        "bikeScore": 72,
+        "costOfLiving": 68,
+        "safetyIndex": 76.8,
+        "kidFriendly": 86,
+        "evInfrastructure": 62,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 10,
+        "accessibility": 12.5,
+        "cost": 12,
+        "family": 12.2,
+        "sustainability": 10.1,
+        "total": 74.8
+      },
+      "rank": 15
+    },
+    {
+      "slug": "christchurch",
+      "name": "Christchurch",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "population": 380000,
+      "coordinates": {
+        "lat": -43.532,
+        "lng": 172.637
+      },
+      "climate": {
+        "sunnyDays": 205,
+        "humidity": 72,
+        "summerHigh": 23,
+        "winterLow": 1
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 68,
+        "bikeScore": 65,
+        "costOfLiving": 62,
+        "safetyIndex": 74,
+        "kidFriendly": 82,
+        "evInfrastructure": 55,
+        "airportDistance": 12
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 11.8,
+        "cost": 12,
+        "family": 11.7,
+        "sustainability": 9,
+        "total": 74.5
+      },
+      "rank": 16
+    },
+    {
+      "slug": "mendoza",
+      "name": "Mendoza",
+      "country": "Argentina",
+      "region": "South America",
+      "population": 115000,
+      "coordinates": {
+        "lat": -32.889,
+        "lng": -68.845
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 50,
+        "summerHigh": 32,
+        "winterLow": 3
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 58,
+        "bikeScore": 55,
+        "costOfLiving": 38.6,
+        "safetyIndex": 68,
+        "kidFriendly": 72,
+        "evInfrastructure": 38,
+        "airportDistance": 12
+      },
+      "scores": {
+        "climate": 28,
+        "geography": 3,
+        "accessibility": 10.8,
+        "cost": 15,
+        "family": 10.5,
+        "sustainability": 7,
+        "total": 74.3
+      },
+      "rank": 17
+    },
+    {
+      "slug": "freiburg",
+      "name": "Freiburg",
+      "country": "Germany",
+      "region": "Europe",
+      "population": 230000,
+      "coordinates": {
+        "lat": 47.999,
+        "lng": 7.842
+      },
+      "climate": {
+        "sunnyDays": 210,
+        "humidity": 62,
+        "summerHigh": 25,
+        "winterLow": 1
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 82,
+        "bikeScore": 92,
+        "costOfLiving": 58,
+        "safetyIndex": 77.9,
+        "kidFriendly": 93,
+        "evInfrastructure": 90,
+        "airportDistance": 70
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 3,
+        "accessibility": 9.2,
+        "cost": 12,
+        "family": 12.8,
+        "sustainability": 13.7,
+        "total": 72.7
+      },
+      "rank": 18
+    },
+    {
+      "slug": "trieste",
+      "name": "Trieste",
+      "country": "Italy",
+      "region": "Europe",
+      "population": 204338,
+      "coordinates": {
+        "lat": 45.649,
+        "lng": 13.777
+      },
+      "climate": {
+        "sunnyDays": 222,
+        "humidity": 68,
+        "summerHigh": 29,
+        "winterLow": 2
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 72,
+        "bikeScore": 65,
+        "costOfLiving": 58,
+        "safetyIndex": 72,
+        "kidFriendly": 78,
+        "evInfrastructure": 55,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 10.2,
+        "cost": 12,
+        "family": 11.3,
+        "sustainability": 9,
+        "total": 72.5
+      },
+      "rank": 19
+    },
+    {
+      "slug": "salzburg",
+      "name": "Salzburg",
+      "country": "Austria",
+      "region": "Europe",
+      "population": 156000,
+      "coordinates": {
+        "lat": 47.811,
+        "lng": 13.055
+      },
+      "climate": {
+        "sunnyDays": 195,
+        "humidity": 72,
+        "summerHigh": 25,
+        "winterLow": 0
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 83,
+        "bikeScore": 88,
+        "costOfLiving": 65,
+        "safetyIndex": 82.6,
+        "kidFriendly": 94,
+        "evInfrastructure": 82,
+        "airportDistance": 5
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 3,
+        "accessibility": 13.3,
+        "cost": 12,
+        "family": 13.2,
+        "sustainability": 12.8,
+        "total": 72.3
+      },
+      "rank": 20
+    },
+    {
+      "slug": "arequipa",
+      "name": "Arequipa",
+      "country": "Peru",
+      "region": "South America",
+      "population": 1000000,
+      "coordinates": {
+        "lat": -16.409,
+        "lng": -71.537
+      },
+      "climate": {
+        "sunnyDays": 300,
+        "humidity": 45,
+        "summerHigh": 24,
+        "winterLow": 6
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 55,
+        "bikeScore": 42,
+        "costOfLiving": 38,
+        "safetyIndex": 62,
+        "kidFriendly": 68,
+        "evInfrastructure": 32,
+        "airportDistance": 12
+      },
+      "scores": {
+        "climate": 28,
+        "geography": 3,
+        "accessibility": 10.5,
+        "cost": 15,
+        "family": 9.8,
+        "sustainability": 5.6,
+        "total": 71.8
+      },
+      "rank": 21
+    },
+    {
+      "slug": "townsville",
+      "name": "Townsville",
+      "country": "Australia",
+      "region": "Oceania",
+      "population": 180000,
+      "coordinates": {
+        "lat": -19.258,
+        "lng": 146.818
+      },
+      "climate": {
+        "sunnyDays": 270,
+        "humidity": 65,
+        "summerHigh": 32,
+        "winterLow": 14
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 52,
+        "bikeScore": 48,
+        "costOfLiving": 65,
+        "safetyIndex": 68,
+        "kidFriendly": 72,
+        "evInfrastructure": 42,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 10,
+        "accessibility": 10.2,
+        "cost": 12,
+        "family": 10.5,
+        "sustainability": 6.8,
+        "total": 71.5
+      },
+      "rank": 22
+    },
+    {
+      "slug": "victoria",
+      "name": "Victoria",
+      "country": "Canada",
+      "region": "North America",
+      "population": 383000,
+      "coordinates": {
+        "lat": 48.428,
+        "lng": -123.366
+      },
+      "climate": {
+        "sunnyDays": 308,
+        "humidity": 73,
+        "summerHigh": 21,
+        "winterLow": 3
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 76,
+        "bikeScore": 82,
+        "costOfLiving": 130,
+        "safetyIndex": 77.6,
+        "kidFriendly": 90,
+        "evInfrastructure": 67,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 10,
+        "accessibility": 10.6,
+        "cost": 3,
+        "family": 12.6,
+        "sustainability": 11.2,
+        "total": 71.3
+      },
+      "rank": 23
+    },
+    {
+      "slug": "dunedin",
+      "name": "Dunedin",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "population": 130000,
+      "coordinates": {
+        "lat": -45.879,
+        "lng": 170.5
+      },
+      "climate": {
+        "sunnyDays": 175,
+        "humidity": 72,
+        "summerHigh": 20,
+        "winterLow": 4
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 71,
+        "bikeScore": 69,
+        "costOfLiving": 57.3,
+        "safetyIndex": 79.8,
+        "kidFriendly": 86,
+        "evInfrastructure": 48,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 10,
+        "accessibility": 10.1,
+        "cost": 12,
+        "family": 12.4,
+        "sustainability": 8.8,
+        "total": 71.3
+      },
+      "rank": 24
+    },
+    {
+      "slug": "wollongong",
+      "name": "Wollongong",
+      "country": "Australia",
+      "region": "Oceania",
+      "population": 302000,
+      "coordinates": {
+        "lat": -34.425,
+        "lng": 150.893
+      },
+      "climate": {
+        "sunnyDays": 218,
+        "humidity": 68,
+        "summerHigh": 26,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 68,
+        "bikeScore": 66,
+        "costOfLiving": 64.2,
+        "safetyIndex": 74,
+        "kidFriendly": 82,
+        "evInfrastructure": 52,
+        "airportDistance": 80
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 7.8,
+        "cost": 12,
+        "family": 11.7,
+        "sustainability": 8.9,
+        "total": 70.4
+      },
+      "rank": 25
+    },
+    {
+      "slug": "santa-barbara",
+      "name": "Santa Barbara",
+      "country": "USA",
+      "region": "North America",
+      "population": 91000,
+      "coordinates": {
+        "lat": 34.421,
+        "lng": -119.699
+      },
+      "climate": {
+        "sunnyDays": 283,
+        "humidity": 71,
+        "summerHigh": 24,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 70,
+        "bikeScore": 75,
+        "costOfLiving": 145,
+        "safetyIndex": 76,
+        "kidFriendly": 88,
+        "evInfrastructure": 68,
+        "airportDistance": 15
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 10,
+        "accessibility": 12,
+        "cost": 3,
+        "family": 12.3,
+        "sustainability": 10.7,
+        "total": 70
+      },
+      "rank": 26
+    },
+    {
+      "slug": "vina-del-mar",
+      "name": "Vina del Mar",
+      "country": "Chile",
+      "region": "South America",
+      "population": 335000,
+      "coordinates": {
+        "lat": -33.015,
+        "lng": -71.552
+      },
+      "climate": {
+        "sunnyDays": 240,
+        "humidity": 72,
+        "summerHigh": 21,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 68,
+        "bikeScore": 52,
+        "costOfLiving": 45,
+        "safetyIndex": 70,
+        "kidFriendly": 76,
+        "evInfrastructure": 40,
+        "airportDistance": 120
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 6.8,
+        "cost": 15,
+        "family": 11,
+        "sustainability": 6.9,
+        "total": 69.7
+      },
+      "rank": 27
+    },
+    {
+      "slug": "nelson",
+      "name": "Nelson",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "population": 75000,
+      "coordinates": {
+        "lat": -41.271,
+        "lng": 173.284
+      },
+      "climate": {
+        "sunnyDays": 245,
+        "humidity": 68,
+        "summerHigh": 23,
+        "winterLow": 5
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 65,
+        "bikeScore": 62,
+        "costOfLiving": 62,
+        "safetyIndex": 76,
+        "kidFriendly": 82,
+        "evInfrastructure": 48,
+        "airportDistance": 55
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 7.5,
+        "cost": 12,
+        "family": 11.9,
+        "sustainability": 8.3,
+        "total": 69.6
+      },
+      "rank": 28
+    },
+    {
+      "slug": "granada",
+      "name": "Granada",
+      "country": "Spain",
+      "region": "Europe",
+      "population": 232770,
+      "coordinates": {
+        "lat": 37.177,
+        "lng": -3.598
+      },
+      "climate": {
+        "sunnyDays": 310,
+        "humidity": 55,
+        "summerHigh": 34,
+        "winterLow": 1
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 65,
+        "bikeScore": 55,
+        "costOfLiving": 44.2,
+        "safetyIndex": 71,
+        "kidFriendly": 75,
+        "evInfrastructure": 52,
+        "airportDistance": 85
+      },
+      "scores": {
+        "climate": 25,
+        "geography": 3,
+        "accessibility": 7.5,
+        "cost": 15,
+        "family": 11,
+        "sustainability": 8,
+        "total": 69.5
+      },
+      "rank": 29
+    },
+    {
+      "slug": "valparaiso",
+      "name": "Valparaiso",
+      "country": "Chile",
+      "region": "South America",
+      "population": 295000,
+      "coordinates": {
+        "lat": -33.046,
+        "lng": -71.62
+      },
+      "climate": {
+        "sunnyDays": 240,
+        "humidity": 72,
+        "summerHigh": 21,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 75,
+        "bikeScore": 48,
+        "costOfLiving": 42,
+        "safetyIndex": 68,
+        "kidFriendly": 72,
+        "evInfrastructure": 38,
+        "airportDistance": 120
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 7.5,
+        "cost": 15,
+        "family": 10.5,
+        "sustainability": 6.5,
+        "total": 69.5
+      },
+      "rank": 30
+    },
+    {
+      "slug": "ventura",
+      "name": "Ventura",
+      "country": "USA",
+      "region": "North America",
+      "population": 110000,
+      "coordinates": {
+        "lat": 34.275,
+        "lng": -119.229
+      },
+      "climate": {
+        "sunnyDays": 275,
+        "humidity": 69,
+        "summerHigh": 25,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 62,
+        "bikeScore": 72,
+        "costOfLiving": 128,
+        "safetyIndex": 74,
+        "kidFriendly": 82,
+        "evInfrastructure": 62,
+        "airportDistance": 25
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 10,
+        "accessibility": 9.2,
+        "cost": 6,
+        "family": 11.7,
+        "sustainability": 10.1,
+        "total": 69
+      },
+      "rank": 31
+    },
+    {
+      "slug": "regensburg",
+      "name": "Regensburg",
+      "country": "Germany",
+      "region": "Europe",
+      "population": 153000,
+      "coordinates": {
+        "lat": 49.013,
+        "lng": 12.102
+      },
+      "climate": {
+        "sunnyDays": 210,
+        "humidity": 68,
+        "summerHigh": 25,
+        "winterLow": 0
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 80,
+        "bikeScore": 87,
+        "costOfLiving": 58.2,
+        "safetyIndex": 81.9,
+        "kidFriendly": 93,
+        "evInfrastructure": 75,
+        "airportDistance": 100
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 3,
+        "accessibility": 8,
+        "cost": 12,
+        "family": 13.1,
+        "sustainability": 12.2,
+        "total": 68.3
+      },
+      "rank": 32
+    },
+    {
+      "slug": "groningen",
+      "name": "Groningen",
+      "country": "Netherlands",
+      "region": "Europe",
+      "population": 235000,
+      "coordinates": {
+        "lat": 53.219,
+        "lng": 6.567
+      },
+      "climate": {
+        "sunnyDays": 165,
+        "humidity": 74,
+        "summerHigh": 22,
+        "winterLow": 1
+      },
+      "geography": {
+        "nearMountains": false,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 88,
+        "bikeScore": 95,
+        "costOfLiving": 64,
+        "safetyIndex": 72,
+        "kidFriendly": 88,
+        "evInfrastructure": 72,
+        "airportDistance": 12
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 0,
+        "accessibility": 13.8,
+        "cost": 12,
+        "family": 12,
+        "sustainability": 12.5,
+        "total": 68.3
+      },
+      "rank": 33
+    },
+    {
+      "slug": "newcastle",
+      "name": "Newcastle",
+      "country": "Australia",
+      "region": "Oceania",
+      "population": 322000,
+      "coordinates": {
+        "lat": -32.927,
+        "lng": 151.778
+      },
+      "climate": {
+        "sunnyDays": 220,
+        "humidity": 65,
+        "summerHigh": 27,
+        "winterLow": 8
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 62,
+        "bikeScore": 58,
+        "costOfLiving": 72,
+        "safetyIndex": 75,
+        "kidFriendly": 80,
+        "evInfrastructure": 55,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 9.2,
+        "cost": 9,
+        "family": 11.6,
+        "sustainability": 8.5,
+        "total": 68.3
+      },
+      "rank": 34
+    },
+    {
+      "slug": "napier-hastings",
+      "name": "Napier-Hastings",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "population": 142000,
+      "coordinates": {
+        "lat": -39.493,
+        "lng": 176.912
+      },
+      "climate": {
+        "sunnyDays": 240,
+        "humidity": 68,
+        "summerHigh": 26,
+        "winterLow": 5
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 62,
+        "bikeScore": 58,
+        "costOfLiving": 58,
+        "safetyIndex": 74,
+        "kidFriendly": 80,
+        "evInfrastructure": 42,
+        "airportDistance": 75
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 7.2,
+        "cost": 12,
+        "family": 11.6,
+        "sustainability": 7.5,
+        "total": 68.3
+      },
+      "rank": 35
+    },
+    {
+      "slug": "utrecht",
+      "name": "Utrecht",
+      "country": "Netherlands",
+      "region": "Europe",
+      "population": 361000,
+      "coordinates": {
+        "lat": 52.091,
+        "lng": 5.122
+      },
+      "climate": {
+        "sunnyDays": 185,
+        "humidity": 72,
+        "summerHigh": 23,
+        "winterLow": 2
+      },
+      "geography": {
+        "nearMountains": false,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 90,
+        "bikeScore": 96,
+        "costOfLiving": 68,
+        "safetyIndex": 75.9,
+        "kidFriendly": 89,
+        "evInfrastructure": 78,
+        "airportDistance": 45
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 0,
+        "accessibility": 12,
+        "cost": 12,
+        "family": 12.4,
+        "sustainability": 13.1,
+        "total": 67.4
+      },
+      "rank": 36
+    },
+    {
+      "slug": "san-luis-obispo",
+      "name": "San Luis Obispo",
+      "country": "USA",
+      "region": "North America",
+      "population": 283000,
+      "coordinates": {
+        "lat": 35.283,
+        "lng": -120.659
+      },
+      "climate": {
+        "sunnyDays": 283,
+        "humidity": 68,
+        "summerHigh": 27,
+        "winterLow": 6
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 65,
+        "bikeScore": 78,
+        "costOfLiving": 135,
+        "safetyIndex": 75,
+        "kidFriendly": 85,
+        "evInfrastructure": 65,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 10,
+        "accessibility": 9.5,
+        "cost": 3,
+        "family": 12,
+        "sustainability": 10.7,
+        "total": 67.2
+      },
+      "rank": 37
+    },
+    {
+      "slug": "albuquerque",
+      "name": "Albuquerque",
+      "country": "USA",
+      "region": "North America",
+      "population": 565000,
+      "coordinates": {
+        "lat": 35.084,
+        "lng": -106.651
+      },
+      "climate": {
+        "sunnyDays": 310,
+        "humidity": 44,
+        "summerHigh": 34,
+        "winterLow": 23
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 48,
+        "bikeScore": 62,
+        "costOfLiving": 101.5,
+        "safetyIndex": 65,
+        "kidFriendly": 78,
+        "evInfrastructure": 52,
+        "airportDistance": 8
+      },
+      "scores": {
+        "climate": 29,
+        "geography": 3,
+        "accessibility": 9.8,
+        "cost": 6,
+        "family": 10.7,
+        "sustainability": 8.6,
+        "total": 67.1
+      },
+      "rank": 38
+    },
+    {
+      "slug": "gold-coast",
+      "name": "Gold Coast",
+      "country": "Australia",
+      "region": "Oceania",
+      "population": 679000,
+      "coordinates": {
+        "lat": -28.017,
+        "lng": 153.431
+      },
+      "climate": {
+        "sunnyDays": 245,
+        "humidity": 66,
+        "summerHigh": 29,
+        "winterLow": 11
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 58,
+        "bikeScore": 55,
+        "costOfLiving": 82,
+        "safetyIndex": 70,
+        "kidFriendly": 76,
+        "evInfrastructure": 52,
+        "airportDistance": 25
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 8.8,
+        "cost": 9,
+        "family": 11,
+        "sustainability": 8,
+        "total": 66.8
+      },
+      "rank": 39
+    },
+    {
+      "slug": "aarhus",
+      "name": "Aarhus",
+      "country": "Denmark",
+      "region": "Europe",
+      "population": 285000,
+      "coordinates": {
+        "lat": 56.157,
+        "lng": 10.211
+      },
+      "climate": {
+        "sunnyDays": 175,
+        "humidity": 72,
+        "summerHigh": 22,
+        "winterLow": 1
+      },
+      "geography": {
+        "nearMountains": false,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 82,
+        "bikeScore": 94,
+        "costOfLiving": 72,
+        "safetyIndex": 76.5,
+        "kidFriendly": 90,
+        "evInfrastructure": 80,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 3,
+        "accessibility": 11.2,
+        "cost": 9,
+        "family": 12.5,
+        "sustainability": 13.1,
+        "total": 66.7
+      },
+      "rank": 40
+    },
+    {
+      "slug": "medellin",
+      "name": "Medellin",
+      "country": "Colombia",
+      "region": "South America",
+      "population": 660000,
+      "coordinates": {
+        "lat": 6.251,
+        "lng": -75.564
+      },
+      "climate": {
+        "sunnyDays": 250,
+        "humidity": 66,
+        "summerHigh": 28,
+        "winterLow": 17
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 62,
+        "bikeScore": 52,
+        "costOfLiving": 38,
+        "safetyIndex": 65,
+        "kidFriendly": 70,
+        "evInfrastructure": 45,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 3,
+        "accessibility": 9.2,
+        "cost": 15,
+        "family": 10.1,
+        "sustainability": 7.3,
+        "total": 66.6
+      },
+      "rank": 41
+    },
+    {
+      "slug": "burlington",
+      "name": "Burlington",
+      "country": "USA",
+      "region": "North America",
+      "population": 44000,
+      "coordinates": {
+        "lat": 44.476,
+        "lng": -73.213
+      },
+      "climate": {
+        "sunnyDays": 185,
+        "humidity": 72,
+        "summerHigh": 27,
+        "winterLow": 15
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 71,
+        "bikeScore": 84,
+        "costOfLiving": 68.5,
+        "safetyIndex": 78.5,
+        "kidFriendly": 91,
+        "evInfrastructure": 68,
+        "airportDistance": 75
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 3,
+        "accessibility": 8.1,
+        "cost": 12,
+        "family": 12.7,
+        "sustainability": 11.4,
+        "total": 65.2
+      },
+      "rank": 42
+    },
+    {
+      "slug": "ljubljana",
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "region": "Europe",
+      "population": 290000,
+      "coordinates": {
+        "lat": 46.057,
+        "lng": 14.506
+      },
+      "climate": {
+        "sunnyDays": 210,
+        "humidity": 75,
+        "summerHigh": 27,
+        "winterLow": -2
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 82,
+        "bikeScore": 78,
+        "costOfLiving": 52,
+        "safetyIndex": 78.1,
+        "kidFriendly": 82,
+        "evInfrastructure": 55,
+        "airportDistance": 25
+      },
+      "scores": {
+        "climate": 17,
+        "geography": 3,
+        "accessibility": 11.2,
+        "cost": 12,
+        "family": 12,
+        "sustainability": 10,
+        "total": 65.2
+      },
+      "rank": 43
+    },
+    {
+      "slug": "cuenca",
+      "name": "Cuenca",
+      "country": "Ecuador",
+      "region": "South America",
+      "population": 580000,
+      "coordinates": {
+        "lat": -2.9,
+        "lng": -79.005
+      },
+      "climate": {
+        "sunnyDays": 190,
+        "humidity": 70,
+        "summerHigh": 22,
+        "winterLow": 11
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 78,
+        "bikeScore": 58,
+        "costOfLiving": 35.2,
+        "safetyIndex": 65.4,
+        "kidFriendly": 75,
+        "evInfrastructure": 42,
+        "airportDistance": 35
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 3,
+        "accessibility": 10.8,
+        "cost": 15,
+        "family": 10.5,
+        "sustainability": 7.5,
+        "total": 64.8
+      },
+      "rank": 44
+    },
+    {
+      "slug": "tauranga",
+      "name": "Tauranga",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "population": 250000,
+      "coordinates": {
+        "lat": -37.687,
+        "lng": 176.165
+      },
+      "climate": {
+        "sunnyDays": 230,
+        "humidity": 73,
+        "summerHigh": 25,
+        "winterLow": 7
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 58,
+        "bikeScore": 55,
+        "costOfLiving": 72,
+        "safetyIndex": 72,
+        "kidFriendly": 78,
+        "evInfrastructure": 45,
+        "airportDistance": 100
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 5.8,
+        "cost": 9,
+        "family": 11.3,
+        "sustainability": 7.5,
+        "total": 63.6
+      },
+      "rank": 45
+    },
+    {
+      "slug": "sunshine-coast",
+      "name": "Sunshine Coast",
+      "country": "Australia",
+      "region": "Oceania",
+      "population": 333000,
+      "coordinates": {
+        "lat": -26.68,
+        "lng": 153.05
+      },
+      "climate": {
+        "sunnyDays": 245,
+        "humidity": 66,
+        "summerHigh": 29,
+        "winterLow": 11
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": true
+      },
+      "livability": {
+        "walkScore": 55,
+        "bikeScore": 52,
+        "costOfLiving": 75,
+        "safetyIndex": 72,
+        "kidFriendly": 78,
+        "evInfrastructure": 48,
+        "airportDistance": 100
+      },
+      "scores": {
+        "climate": 20,
+        "geography": 10,
+        "accessibility": 5.5,
+        "cost": 9,
+        "family": 11.3,
+        "sustainability": 7.5,
+        "total": 63.3
+      },
+      "rank": 46
+    },
+    {
+      "slug": "alajuela",
+      "name": "Alajuela",
+      "country": "Costa Rica",
+      "region": "Central America",
+      "population": 310000,
+      "coordinates": {
+        "lat": 10.016,
+        "lng": -84.215
+      },
+      "climate": {
+        "sunnyDays": 210,
+        "humidity": 78,
+        "summerHigh": 27,
+        "winterLow": 15
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 58,
+        "bikeScore": 45,
+        "costOfLiving": 48,
+        "safetyIndex": 68,
+        "kidFriendly": 72,
+        "evInfrastructure": 35,
+        "airportDistance": 5
+      },
+      "scores": {
+        "climate": 18,
+        "geography": 3,
+        "accessibility": 10.8,
+        "cost": 15,
+        "family": 10.5,
+        "sustainability": 6,
+        "total": 63.3
+      },
+      "rank": 47
+    },
+    {
+      "slug": "santa-fe",
+      "name": "Santa Fe",
+      "country": "USA",
+      "region": "North America",
+      "population": 87000,
+      "coordinates": {
+        "lat": 35.687,
+        "lng": -105.938
+      },
+      "climate": {
+        "sunnyDays": 283,
+        "humidity": 45,
+        "summerHigh": 30,
+        "winterLow": 18
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 55,
+        "bikeScore": 68,
+        "costOfLiving": 125,
+        "safetyIndex": 72,
+        "kidFriendly": 82,
+        "evInfrastructure": 55,
+        "airportDistance": 97
+      },
+      "scores": {
+        "climate": 26,
+        "geography": 3,
+        "accessibility": 6.5,
+        "cost": 6,
+        "family": 11.5,
+        "sustainability": 9.2,
+        "total": 62.3
+      },
+      "rank": 48
+    },
+    {
+      "slug": "ghent",
+      "name": "Ghent",
+      "country": "Belgium",
+      "region": "Europe",
+      "population": 264000,
+      "coordinates": {
+        "lat": 51.054,
+        "lng": 3.722
+      },
+      "climate": {
+        "sunnyDays": 175,
+        "humidity": 75,
+        "summerHigh": 23,
+        "winterLow": 2
+      },
+      "geography": {
+        "nearMountains": false,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 86,
+        "bikeScore": 92,
+        "costOfLiving": 56.4,
+        "safetyIndex": 72,
+        "kidFriendly": 87,
+        "evInfrastructure": 70,
+        "airportDistance": 55
+      },
+      "scores": {
+        "climate": 16,
+        "geography": 0,
+        "accessibility": 9.6,
+        "cost": 12,
+        "family": 11.9,
+        "sustainability": 12.2,
+        "total": 61.7
+      },
+      "rank": 49
+    },
+    {
+      "slug": "boulder",
+      "name": "Boulder",
+      "country": "USA",
+      "region": "North America",
+      "population": 108250,
+      "coordinates": {
+        "lat": 40.015,
+        "lng": -105.271
+      },
+      "climate": {
+        "sunnyDays": 245,
+        "humidity": 47,
+        "summerHigh": 31,
+        "winterLow": 18
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 58,
+        "bikeScore": 87,
+        "costOfLiving": 146.6,
+        "safetyIndex": 78.5,
+        "kidFriendly": 91,
+        "evInfrastructure": 72,
+        "airportDistance": 76
+      },
+      "scores": {
+        "climate": 24,
+        "geography": 3,
+        "accessibility": 6.8,
+        "cost": 3,
+        "family": 12.7,
+        "sustainability": 11.9,
+        "total": 61.4
+      },
+      "rank": 50
+    },
+    {
+      "slug": "kelowna",
+      "name": "Kelowna",
+      "country": "Canada",
+      "region": "North America",
+      "population": 222000,
+      "coordinates": {
+        "lat": 49.888,
+        "lng": -119.496
+      },
+      "climate": {
+        "sunnyDays": 200,
+        "humidity": 58,
+        "summerHigh": 27,
+        "winterLow": 1
+      },
+      "geography": {
+        "nearMountains": true,
+        "nearOcean": false
+      },
+      "livability": {
+        "walkScore": 58,
+        "bikeScore": 65,
+        "costOfLiving": 115,
+        "safetyIndex": 72,
+        "kidFriendly": 80,
+        "evInfrastructure": 58,
+        "airportDistance": 120
+      },
+      "scores": {
+        "climate": 22,
+        "geography": 3,
+        "accessibility": 5.8,
+        "cost": 6,
+        "family": 11.4,
+        "sustainability": 9.2,
+        "total": 57.4
+      },
+      "rank": 51
+    }
+  ]
+}
