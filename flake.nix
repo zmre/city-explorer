@@ -9,40 +9,58 @@
     flake-utils,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
-      lib = import <nixpkgs/lib>;
       pkgs = nixpkgs.legacyPackages.${system};
+
+      # Build the static site
+      climate-research = pkgs.stdenv.mkDerivation {
+        pname = "climate-research";
+        version = "0.1.0";
+        src = self;
+
+        nativeBuildInputs = [pkgs.bun pkgs.nodejs_22];
+
+        buildPhase = ''
+          cd web
+          export HOME=$TMPDIR
+          bun install --frozen-lockfile
+          bun run build
+        '';
+
+        installPhase = ''
+          mkdir -p $out
+          cp -r build/* $out/
+        '';
+      };
+
+      # Script to run the dev server (runs from current working directory)
+      run-dev = pkgs.writeShellScriptBin "climate-research-dev" ''
+        # Find web directory - check if we're in it or need to cd into it
+        if [ -f "package.json" ] && grep -q "vite" package.json 2>/dev/null; then
+          WEB_DIR="."
+        elif [ -d "web" ] && [ -f "web/package.json" ]; then
+          WEB_DIR="web"
+        else
+          echo "Error: Cannot find web directory. Run from project root or web/ directory."
+          exit 1
+        fi
+
+        cd "$WEB_DIR"
+        ${pkgs.bun}/bin/bun install --frozen-lockfile
+        ${pkgs.bun}/bin/bun run dev
+      '';
     in rec {
       packages = {
-        city-explorer = {
-          name = "city-explorer";
-          version = "0.1.0";
-          src = ./.;
-          buildInputs = with pkgs.nodePackages; [
-            pkgs.nodejs_22
-            pkgs.autoconf
-            pkgs.mozjpeg
-            pkgs.libtool
-            pkgs.automake
-            pkgs.nasm
-            pkgs.libpng
-            pkgs.optipng
-            pkgs.pkg-config
-            pkgs.gcc
-            pkgs.dpkg
-            pkgs.jq
-            pkgs.bun
-            (pkgs.yarn-berry.override {nodejs = nodejs_22;})
-            typescript
-            typescript-language-server
-            diagnostic-languageserver
-            eslint_d
-          ];
-          nativeBuildInputs =
-            []
-            ++ lib.optionals pkgs.stdenv.isDarwin [pkgs.darwin.cctools];
+        default = climate-research;
+        static = climate-research;
+        dev = run-dev;
+      };
+
+      apps = {
+        default = {
+          type = "app";
+          program = "${run-dev}/bin/climate-research-dev";
         };
       };
-      defaultPackage = packages.city-explorer;
 
       devShell = pkgs.mkShell {
         buildInputs = with pkgs.nodePackages; [
