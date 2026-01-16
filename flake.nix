@@ -12,8 +12,8 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       # Build the static site
-      climate-research = pkgs.stdenv.mkDerivation {
-        pname = "climate-research";
+      city-explorer = pkgs.stdenv.mkDerivation {
+        pname = "city-explorer";
         version = "0.1.0";
         src = self;
 
@@ -33,7 +33,7 @@
       };
 
       # Script to run the dev server (runs from current working directory)
-      run-dev = pkgs.writeShellScriptBin "climate-research-dev" ''
+      run-dev = pkgs.writeShellScriptBin "city-explorer-dev" ''
         # Find web directory - check if we're in it or need to cd into it
         if [ -f "package.json" ] && grep -q "vite" package.json 2>/dev/null; then
           WEB_DIR="."
@@ -50,15 +50,15 @@
       '';
     in rec {
       packages = {
-        default = climate-research;
-        static = climate-research;
+        default = city-explorer;
+        static = city-explorer;
         dev = run-dev;
       };
 
       apps = {
         default = {
           type = "app";
-          program = "${run-dev}/bin/climate-research-dev";
+          program = "${run-dev}/bin/city-explorer-dev";
         };
       };
 

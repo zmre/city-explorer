@@ -5,3 +5,5 @@ This is a toy app built to make some research done by AI tools more friendly and
 I'm making this public only to help my own workflow when I want to look at it.
 
 ![Screenshot](screenshot.png)
+
+If you're a nix user, you can get the static html files (and serve however you want) by building the default package. Or you can get a local server running in dev mode using nix run. For example: `nix run github:zmre/city-explorer`.
