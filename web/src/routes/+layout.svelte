@@ -17,6 +17,7 @@
 			<ul class="menu menu-horizontal px-1">
 				<li><a href="/">Dashboard</a></li>
 				<li><a href="/compare">Compare</a></li>
+				<li><a href="/research">Research</a></li>
 				<li><a href="/methodology">Methodology</a></li>
 				<li><a href="/sources">Sources</a></li>
 			</ul>

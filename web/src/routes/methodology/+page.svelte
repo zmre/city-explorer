@@ -4,192 +4,407 @@
 
 <svelte:head>
 	<title>Scoring Methodology - Climate Explorer</title>
-	<meta name="description" content="Learn how cities are scored and ranked in the Climate Explorer based on climate, geography, livability, and sustainability factors." />
+	<meta
+		name="description"
+		content="Learn how cities are scored and ranked in the Climate Explorer based on climate, geography, livability, and sustainability factors."
+	/>
 </svelte:head>
 
-<div class="prose prose-lg max-w-4xl mx-auto">
-	<h1>Scoring Methodology</h1>
+<div class="max-w-4xl mx-auto space-y-12">
+	<!-- Header -->
+	<header class="text-center">
+		<h1 class="text-4xl font-bold mb-4">Scoring Methodology</h1>
+		<p class="text-lg opacity-80 max-w-2xl mx-auto">
+			This research project identifies and ranks cities globally based on climate quality,
+			livability factors, and forward-thinking urban policies. The goal is to find ideal relocation
+			candidates that balance excellent weather, quality of life, and progressive infrastructure.
+		</p>
+	</header>
 
-	<p class="lead">
-		This research project identifies and ranks cities globally based on climate quality, livability factors, and forward-thinking urban policies. The goal is to find ideal relocation candidates that balance excellent weather, quality of life, and progressive infrastructure.
-	</p>
+	<!-- Boulder Baseline -->
+	<section class="bg-base-200 rounded-xl p-6">
+		<h2 class="text-2xl font-bold mb-4 text-primary">Reference Baseline: Boulder, Colorado</h2>
+		<p class="mb-4">
+			Boulder serves as our climate benchmark with approximately 300 sunny days per year, low
+			relative humidity (30-50%), four distinct seasons, mild winters with occasional snow, and warm
+			but not hot summers.
+		</p>
+		<div class="stats stats-vertical lg:stats-horizontal shadow bg-base-300 w-full">
+			<div class="stat">
+				<div class="stat-title">Sunny Days</div>
+				<div class="stat-value text-primary">300</div>
+				<div class="stat-desc">days per year</div>
+			</div>
+			<div class="stat">
+				<div class="stat-title">Humidity</div>
+				<div class="stat-value text-secondary">30-50%</div>
+				<div class="stat-desc">annual average</div>
+			</div>
+			<div class="stat">
+				<div class="stat-title">Summer High</div>
+				<div class="stat-value">88°F</div>
+				<div class="stat-desc">31°C average</div>
+			</div>
+		</div>
+	</section>
 
-	<h2>Reference Baseline: Boulder, Colorado</h2>
+	<!-- Category Weights -->
+	<section>
+		<h2 class="text-2xl font-bold mb-6 text-primary">Category Weights</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+			<div class="card bg-base-200 shadow-lg">
+				<div class="card-body">
+					<div class="flex justify-between items-center">
+						<h3 class="card-title text-lg">Climate Quality</h3>
+						<span class="badge badge-primary badge-lg">{DEFAULT_WEIGHTS.climate} pts</span>
+					</div>
+					<p class="text-sm opacity-70">Sunny days, temperature, humidity</p>
+				</div>
+			</div>
+			<div class="card bg-base-200 shadow-lg">
+				<div class="card-body">
+					<div class="flex justify-between items-center">
+						<h3 class="card-title text-lg">Geographic Features</h3>
+						<span class="badge badge-secondary badge-lg">{DEFAULT_WEIGHTS.geography} pts</span>
+					</div>
+					<p class="text-sm opacity-70">Mountains, ocean, natural beauty</p>
+				</div>
+			</div>
+			<div class="card bg-base-200 shadow-lg">
+				<div class="card-body">
+					<div class="flex justify-between items-center">
+						<h3 class="card-title text-lg">Accessibility</h3>
+						<span class="badge badge-accent badge-lg">{DEFAULT_WEIGHTS.accessibility} pts</span>
+					</div>
+					<p class="text-sm opacity-70">Airports, connectivity, walkability</p>
+				</div>
+			</div>
+			<div class="card bg-base-200 shadow-lg">
+				<div class="card-body">
+					<div class="flex justify-between items-center">
+						<h3 class="card-title text-lg">Cost of Living</h3>
+						<span class="badge badge-info badge-lg">{DEFAULT_WEIGHTS.cost} pts</span>
+					</div>
+					<p class="text-sm opacity-70">Housing, general expenses</p>
+				</div>
+			</div>
+			<div class="card bg-base-200 shadow-lg">
+				<div class="card-body">
+					<div class="flex justify-between items-center">
+						<h3 class="card-title text-lg">Family-Friendliness</h3>
+						<span class="badge badge-warning badge-lg">{DEFAULT_WEIGHTS.family} pts</span>
+					</div>
+					<p class="text-sm opacity-70">Schools, safety, activities</p>
+				</div>
+			</div>
+			<div class="card bg-base-200 shadow-lg">
+				<div class="card-body">
+					<div class="flex justify-between items-center">
+						<h3 class="card-title text-lg">Sustainability</h3>
+						<span class="badge badge-success badge-lg">{DEFAULT_WEIGHTS.sustainability} pts</span>
+					</div>
+					<p class="text-sm opacity-70">Biking, EVs, forward-thinking policies</p>
+				</div>
+			</div>
+		</div>
+		<p class="text-sm opacity-70 mt-4 text-center">
+			Weights can be customized using the scoring sliders on the main dashboard. Weights are
+			automatically normalized to 100 for scoring.
+		</p>
+	</section>
 
-	<p>
-		Boulder serves as our climate benchmark with approximately 300 sunny days per year, low relative humidity (30-50%), four distinct seasons, mild winters with occasional snow, and warm but not hot summers.
-	</p>
+	<!-- Climate Scoring -->
+	<section class="space-y-6">
+		<h2 class="text-2xl font-bold text-primary">Climate Scoring</h2>
 
-	<h2>Category Weights</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<!-- Sunny Days -->
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Sunny Days (0-10 points)</h3>
+				<ul class="space-y-2">
+					<li class="flex justify-between items-center">
+						<span>300+ days</span>
+						<span class="badge badge-success">10 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>250-299 days</span>
+						<span class="badge">8 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>200-249 days</span>
+						<span class="badge">6 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>150-199 days</span>
+						<span class="badge">4 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>100-149 days</span>
+						<span class="badge">2 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>&lt;100 days</span>
+						<span class="badge badge-ghost">0 pts</span>
+					</li>
+				</ul>
+			</div>
 
-	<div class="overflow-x-auto">
-		<table class="table table-zebra">
-			<thead>
-				<tr>
-					<th>Category</th>
-					<th>Default Weight</th>
-					<th>Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="font-semibold">Climate Quality</td>
-					<td>{DEFAULT_WEIGHTS.climate} pts</td>
-					<td>Sunny days, temperature, humidity</td>
-				</tr>
-				<tr>
-					<td class="font-semibold">Geographic Features</td>
-					<td>{DEFAULT_WEIGHTS.geography} pts</td>
-					<td>Mountains, ocean, natural beauty</td>
-				</tr>
-				<tr>
-					<td class="font-semibold">Accessibility</td>
-					<td>{DEFAULT_WEIGHTS.accessibility} pts</td>
-					<td>Airports, connectivity, walkability</td>
-				</tr>
-				<tr>
-					<td class="font-semibold">Cost of Living</td>
-					<td>{DEFAULT_WEIGHTS.cost} pts</td>
-					<td>Housing, general expenses</td>
-				</tr>
-				<tr>
-					<td class="font-semibold">Family-Friendliness</td>
-					<td>{DEFAULT_WEIGHTS.family} pts</td>
-					<td>Schools, safety, activities</td>
-				</tr>
-				<tr>
-					<td class="font-semibold">Sustainability</td>
-					<td>{DEFAULT_WEIGHTS.sustainability} pts</td>
-					<td>Biking, EVs, forward-thinking policies</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+			<!-- Humidity -->
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Humidity Comfort (0-10 points)</h3>
+				<ul class="space-y-2">
+					<li class="flex justify-between items-center">
+						<span>&lt;40% average</span>
+						<span class="badge badge-success">10 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>40-50%</span>
+						<span class="badge">8 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>50-60%</span>
+						<span class="badge">6 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>60-70%</span>
+						<span class="badge">4 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>70-80%</span>
+						<span class="badge">2 pts</span>
+					</li>
+					<li class="flex justify-between items-center">
+						<span>&gt;80%</span>
+						<span class="badge badge-ghost">0 pts</span>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-	<p class="text-sm opacity-70">
-		Weights can be customized using the scoring sliders on the main dashboard. Weights are automatically normalized to 100 for scoring.
-	</p>
+		<!-- Temperature -->
+		<div class="bg-base-200 rounded-xl p-6">
+			<h3 class="text-lg font-semibold mb-4">Temperature Mildness (0-10 points)</h3>
+			<p>
+				Based on deviation from the ideal temperature range (60-80°F / 15-27°C for highs). Cities
+				with fewer extreme hot and cold days receive higher scores.
+			</p>
+		</div>
+	</section>
 
-	<h2>Climate Scoring</h2>
+	<!-- Geographic Scoring -->
+	<section>
+		<h2 class="text-2xl font-bold mb-6 text-primary">Geographic Scoring</h2>
+		<div class="bg-base-200 rounded-xl p-6">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				<div class="text-center p-4 bg-base-300 rounded-lg">
+					<div class="text-3xl font-bold text-success">10</div>
+					<div class="text-sm opacity-70 mt-1">Mountains + Ocean</div>
+				</div>
+				<div class="text-center p-4 bg-base-300 rounded-lg">
+					<div class="text-3xl font-bold">3</div>
+					<div class="text-sm opacity-70 mt-1">Mountains Only</div>
+				</div>
+				<div class="text-center p-4 bg-base-300 rounded-lg">
+					<div class="text-3xl font-bold">3</div>
+					<div class="text-sm opacity-70 mt-1">Ocean Only</div>
+				</div>
+				<div class="text-center p-4 bg-base-300 rounded-lg">
+					<div class="text-3xl font-bold opacity-50">0</div>
+					<div class="text-sm opacity-70 mt-1">Neither</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<h3>Sunny Days (0-10 points)</h3>
-	<ul>
-		<li><strong>300+ days:</strong> 10 points (Boulder baseline)</li>
-		<li><strong>250-299 days:</strong> 8 points</li>
-		<li><strong>200-249 days:</strong> 6 points</li>
-		<li><strong>150-199 days:</strong> 4 points</li>
-		<li><strong>100-149 days:</strong> 2 points</li>
-		<li><strong>&lt;100 days:</strong> 0 points</li>
-	</ul>
+	<!-- City Selection -->
+	<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div class="bg-base-200 rounded-xl p-6">
+			<h2 class="text-xl font-bold mb-4 text-primary">Population Requirements</h2>
+			<ul class="space-y-3">
+				<li class="flex justify-between">
+					<span class="font-medium">Minimum</span>
+					<span class="font-mono">50,000</span>
+				</li>
+				<li class="flex justify-between">
+					<span class="font-medium">Maximum</span>
+					<span class="font-mono">1,000,000</span>
+				</li>
+			</ul>
+			<p class="text-sm opacity-70 mt-4">
+				Large enough for amenities, small enough to avoid mega-city problems.
+			</p>
+		</div>
 
-	<h3>Humidity Comfort (0-10 points)</h3>
-	<ul>
-		<li><strong>&lt;40% average:</strong> 10 points (ideal)</li>
-		<li><strong>40-50%:</strong> 8 points</li>
-		<li><strong>50-60%:</strong> 6 points</li>
-		<li><strong>60-70%:</strong> 4 points</li>
-		<li><strong>70-80%:</strong> 2 points</li>
-		<li><strong>&gt;80%:</strong> 0 points</li>
-	</ul>
+		<div class="bg-base-200 rounded-xl p-6">
+			<h2 class="text-xl font-bold mb-4 text-primary">Target Regions</h2>
+			<div class="flex flex-wrap gap-2">
+				<span class="badge badge-outline">North America</span>
+				<span class="badge badge-outline">Central America</span>
+				<span class="badge badge-outline">South America</span>
+				<span class="badge badge-outline">Europe</span>
+				<span class="badge badge-outline">Oceania</span>
+			</div>
+		</div>
+	</section>
 
-	<h3>Temperature Mildness (0-10 points)</h3>
-	<p>
-		Based on deviation from the ideal temperature range (60-80°F / 15-27°C for highs). Cities with fewer extreme hot and cold days receive higher scores.
-	</p>
+	<!-- Livability Factors -->
+	<section>
+		<h2 class="text-2xl font-bold mb-6 text-primary">Livability Factors</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Accessibility</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Airport proximity and flight destinations</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Distance to major cities (500k+ population)</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Walk Score (where available)</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Public transportation quality</span>
+					</li>
+				</ul>
+			</div>
 
-	<h2>Geographic Scoring</h2>
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Cost of Living</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Cost of living index (relative to baseline)</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Housing costs (median home price, rent)</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Healthcare and grocery costs</span>
+					</li>
+				</ul>
+			</div>
 
-	<ul>
-		<li><strong>Both mountains AND ocean:</strong> 10 points</li>
-		<li><strong>Near mountains only:</strong> 3 points</li>
-		<li><strong>Near ocean only:</strong> 3 points</li>
-		<li><strong>Neither:</strong> 0 points</li>
-	</ul>
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Family-Friendliness</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>School quality ratings</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Crime rates and safety perception</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary">•</span>
+						<span>Parks, recreation, and cultural amenities</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-	<h2>City Selection Criteria</h2>
+	<!-- Sustainability Criteria -->
+	<section>
+		<h2 class="text-2xl font-bold mb-6 text-primary">Sustainability Criteria</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Transportation</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>Bike lane miles and bike share programs</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>Pedestrian zones and sidewalk coverage</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>Public transit coverage and reliability</span>
+					</li>
+				</ul>
+			</div>
 
-	<h3>Population Requirements</h3>
-	<ul>
-		<li><strong>Minimum:</strong> 50,000 residents</li>
-		<li><strong>Maximum:</strong> 1,000,000 residents</li>
-		<li><strong>Rationale:</strong> Large enough for amenities, small enough to avoid mega-city problems</li>
-	</ul>
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Electric Vehicle Support</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>EV charging stations per capita</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>DC fast charging availability</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>EV incentives and emissions regulations</span>
+					</li>
+				</ul>
+			</div>
 
-	<h3>Target Regions</h3>
-	<ul>
-		<li><strong>North America:</strong> USA, Canada, Mexico</li>
-		<li><strong>Central America:</strong> All countries</li>
-		<li><strong>South America:</strong> All countries</li>
-		<li><strong>Europe:</strong> Western and Eastern Europe</li>
-		<li><strong>Oceania:</strong> Australia, New Zealand</li>
-	</ul>
+			<div class="bg-base-200 rounded-xl p-6">
+				<h3 class="text-lg font-semibold mb-4">Environmental Progress</h3>
+				<ul class="space-y-2 text-sm">
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>Clean energy percentage</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>Net-zero commitments</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-success">•</span>
+						<span>Sustainability initiatives</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-	<h2>Livability Factors</h2>
+	<!-- Custom Scoring -->
+	<section class="bg-base-200 rounded-xl p-6">
+		<h2 class="text-2xl font-bold mb-4 text-primary">Custom Scoring</h2>
+		<p class="mb-4">
+			The dashboard allows you to customize category weights to match your priorities:
+		</p>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+			<div class="bg-base-300 rounded-lg p-4">
+				<div class="font-semibold">Climate Focus</div>
+				<div class="text-sm opacity-70">Prioritizes sunny days and comfortable temperatures</div>
+			</div>
+			<div class="bg-base-300 rounded-lg p-4">
+				<div class="font-semibold">Budget Focus</div>
+				<div class="text-sm opacity-70">Prioritizes low cost of living</div>
+			</div>
+			<div class="bg-base-300 rounded-lg p-4">
+				<div class="font-semibold">Family Focus</div>
+				<div class="text-sm opacity-70">Prioritizes safety and kid-friendliness</div>
+			</div>
+			<div class="bg-base-300 rounded-lg p-4">
+				<div class="font-semibold">Green Focus</div>
+				<div class="text-sm opacity-70">Prioritizes sustainability and biking infrastructure</div>
+			</div>
+		</div>
+		<p class="text-sm opacity-70 mt-4">
+			Your custom weights are reflected in the URL, making it easy to share your personalized
+			rankings with others.
+		</p>
+	</section>
 
-	<h3>Accessibility</h3>
-	<ul>
-		<li>Airport proximity and flight destinations</li>
-		<li>Distance to major cities (500k+ population)</li>
-		<li>Walk Score (where available)</li>
-		<li>Public transportation quality</li>
-	</ul>
-
-	<h3>Cost of Living</h3>
-	<ul>
-		<li>Cost of living index (relative to baseline)</li>
-		<li>Housing costs (median home price, rent)</li>
-		<li>Healthcare and grocery costs</li>
-	</ul>
-
-	<h3>Family-Friendliness</h3>
-	<ul>
-		<li>School quality ratings</li>
-		<li>Crime rates and safety perception</li>
-		<li>Parks, recreation, and cultural amenities</li>
-	</ul>
-
-	<h2>Sustainability Criteria</h2>
-
-	<h3>Transportation</h3>
-	<ul>
-		<li>Bike lane miles and bike share programs</li>
-		<li>Pedestrian zones and sidewalk coverage</li>
-		<li>Public transit coverage and reliability</li>
-	</ul>
-
-	<h3>Electric Vehicle Support</h3>
-	<ul>
-		<li>EV charging stations per capita</li>
-		<li>DC fast charging availability</li>
-		<li>EV incentives and emissions regulations</li>
-	</ul>
-
-	<h3>Environmental Progress</h3>
-	<ul>
-		<li>Clean energy percentage</li>
-		<li>Net-zero commitments</li>
-		<li>Sustainability initiatives</li>
-	</ul>
-
-	<h2>Custom Scoring</h2>
-
-	<p>
-		The dashboard allows you to customize category weights to match your priorities. For example:
-	</p>
-
-	<ul>
-		<li><strong>Climate Focus:</strong> Prioritizes sunny days and comfortable temperatures</li>
-		<li><strong>Budget Focus:</strong> Prioritizes low cost of living</li>
-		<li><strong>Family Focus:</strong> Prioritizes safety and kid-friendliness</li>
-		<li><strong>Green Focus:</strong> Prioritizes sustainability and biking infrastructure</li>
-	</ul>
-
-	<p>
-		Your custom weights are reflected in the URL, making it easy to share your personalized rankings with others.
-	</p>
-
-	<div class="mt-8 flex gap-4">
-		<a href="/" class="btn btn-primary">Explore Dashboard</a>
-		<a href="/sources" class="btn btn-outline">View Data Sources</a>
-	</div>
+	<!-- CTA -->
+	<footer class="flex flex-wrap gap-4 justify-center">
+		<a href="/" class="btn btn-primary btn-lg">Explore Dashboard</a>
+		<a href="/sources" class="btn btn-outline btn-lg">View Data Sources</a>
+		<a href="/research" class="btn btn-outline btn-lg">Read Research</a>
+	</footer>
 </div>

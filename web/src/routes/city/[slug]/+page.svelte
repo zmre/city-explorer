@@ -5,6 +5,7 @@
 	import ClickableMetric from '$lib/components/ClickableMetric.svelte';
 	import { citiesStore } from '$lib/stores/cities.svelte';
 	import { getRegionColor } from '$lib/utils/formatting';
+	import { getWikipediaUrl } from '$lib/utils/wikipedia';
 	import type { City } from '$lib/types/city';
 
 	// Get city from slug
@@ -72,7 +73,17 @@
 			<div>
 				<div class="flex items-center gap-3">
 					<a href="/" class="btn btn-ghost btn-sm">Back</a>
-					<h1 class="text-3xl font-bold">{city.name}</h1>
+					<h1 class="text-3xl font-bold">
+						<a
+							href={getWikipediaUrl(city.slug)}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:text-primary hover:underline transition-colors"
+							title="View on Wikipedia"
+						>
+							{city.name}
+						</a>
+					</h1>
 				</div>
 				<div class="flex items-center gap-2 mt-2">
 					<span class="badge" style="background-color: {getRegionColor(city.region)}; color: white;">

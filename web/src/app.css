@@ -55,3 +55,150 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-neutral;
 }
+
+/* Research article markdown styling */
+.research-article h1 {
+	font-size: 1.875rem;
+	font-weight: 700;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid oklch(var(--b3));
+}
+
+.research-article h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: oklch(var(--p));
+}
+
+.research-article h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.research-article h4 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	opacity: 0.9;
+}
+
+.research-article p {
+	margin-bottom: 1rem;
+	line-height: 1.75;
+}
+
+.research-article ul {
+	margin-bottom: 1rem;
+	margin-left: 1.5rem;
+}
+
+.research-article ul li {
+	list-style-type: disc;
+	margin-bottom: 0.25rem;
+}
+
+.research-article ol {
+	margin-bottom: 1rem;
+	margin-left: 1.5rem;
+}
+
+.research-article ol li {
+	list-style-type: decimal;
+	margin-bottom: 0.25rem;
+}
+
+.research-article strong {
+	font-weight: 700;
+	color: oklch(var(--p));
+}
+
+.research-article hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border-color: oklch(var(--b3));
+}
+
+.research-article blockquote {
+	border-left: 4px solid oklch(var(--p));
+	padding-left: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-style: italic;
+	opacity: 0.8;
+}
+
+.research-article code {
+	background-color: oklch(var(--b3));
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+}
+
+.research-article pre {
+	background-color: oklch(var(--b3));
+	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.research-article pre code {
+	background-color: transparent;
+	padding: 0;
+}
+
+/* Research article table styling */
+.research-article table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 0.875rem;
+}
+
+.research-article thead {
+	background-color: oklch(var(--b3));
+}
+
+.research-article th {
+	padding: 0.75rem 1rem;
+	text-align: left;
+	font-weight: 600;
+	border: 1px solid oklch(var(--b3));
+}
+
+.research-article td {
+	padding: 0.75rem 1rem;
+	border: 1px solid oklch(var(--b3));
+}
+
+.research-article tr:nth-child(even) {
+	background-color: oklch(var(--b2));
+}
+
+.research-article tr:hover {
+	background-color: oklch(var(--b3));
+}
+
+.research-article a {
+	color: oklch(var(--p));
+}
+
+.research-article a:hover {
+	text-decoration: underline;
+}
+
+.research-article img {
+	max-width: 100%;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
