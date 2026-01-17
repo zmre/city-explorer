@@ -12,23 +12,35 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       # Build the static site
-      city-explorer = pkgs.stdenv.mkDerivation {
+      city-explorer = pkgs.buildNpmPackage {
         pname = "city-explorer";
         version = "0.1.0";
-        src = self;
+        src = self + "/web";
 
-        nativeBuildInputs = [pkgs.bun pkgs.nodejs_22];
+        npmDepsHash = "sha256-pBSeMiAfmWmj4bfagu1Ns9kArg0pkTNpgTtg80FG73c=";
 
+        # SvelteKit needs HOME for .svelte-kit directory
         buildPhase = ''
-          cd web
+          runHook preBuild
           export HOME=$TMPDIR
-          bun install --frozen-lockfile
-          bun run build
+          npm run build
+          runHook postBuild
         '';
 
         installPhase = ''
+          runHook preInstall
           mkdir -p $out
           cp -r build/* $out/
+          runHook postInstall
+        '';
+
+        # Don't run prepare script during npm ci
+        npmFlags = ["--ignore-scripts"];
+        makeCacheWritable = true;
+
+        # Run svelte-kit sync after npm ci
+        postConfigure = ''
+          npm run prepare
         '';
       };
 
