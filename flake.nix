@@ -32,22 +32,39 @@
         '';
       };
 
-      # Script to run the dev server (runs from current working directory)
-      run-dev = pkgs.writeShellScriptBin "city-explorer-dev" ''
-        # Find web directory - check if we're in it or need to cd into it
-        if [ -f "package.json" ] && grep -q "vite" package.json 2>/dev/null; then
-          WEB_DIR="."
-        elif [ -d "web" ] && [ -f "web/package.json" ]; then
-          WEB_DIR="web"
-        else
-          echo "Error: Cannot find web directory. Run from project root or web/ directory."
-          exit 1
-        fi
+      # Bundle the web source for use by the dev script
+      web-source = pkgs.stdenv.mkDerivation {
+        pname = "city-explorer-source";
+        version = "0.1.0";
+        src = self;
+        dontBuild = true;
+        installPhase = ''
+          mkdir -p $out
+          cp -r web/* $out/
+        '';
+      };
 
-        cd "$WEB_DIR"
-        ${pkgs.bun}/bin/bun install --frozen-lockfile
-        ${pkgs.bun}/bin/bun run dev
-      '';
+      # Script to run the dev server - works both locally and remotely
+      run-dev = pkgs.writeShellApplication {
+        name = "city-explorer-dev";
+        runtimeInputs = [pkgs.bun];
+        text = ''
+          # Source is bundled at this Nix store path
+          SOURCE_DIR="${web-source}"
+
+          # Create writable temp directory (bun needs to write node_modules)
+          WORK_DIR=$(mktemp -d)
+          trap 'rm -rf "$WORK_DIR"' EXIT
+
+          echo "Setting up city-explorer dev environment..."
+          cp -r "$SOURCE_DIR"/* "$WORK_DIR/"
+          cd "$WORK_DIR"
+
+          bun install --frozen-lockfile
+          echo "Starting dev server..."
+          bun run dev
+        '';
+      };
     in rec {
       packages = {
         default = city-explorer;
